@@ -13,6 +13,8 @@ SIMAGENT - The Electronic LLM Colony starts with three worker roles and one rule
 
 Phase 0 runs with three roles. The queen/core is the orchestrator (see [PROTOCOLS.md](PROTOCOLS.md)); in Phase 0 a human operator or simple board code plays it. The Coordinator role is the optional Phase 1 step that hands queue ordering to a model.
 
+The full org chart, with the support roles (Queen / Core, Critic / Auditor, Chronicler, Granary keeper, Scout), reporting lines, budget classes, and checkpoints, is in [ORGCHART.md](ORGCHART.md).
+
 ## The mechanic: pheromone task board
 
 One board. Every task moves through five states:
@@ -71,8 +73,17 @@ Allowed actions:
 | `split(task_id, subtasks)` | Forager, Coordinator |
 | `submit(task_id, output, evidence)` | Forager, Builder |
 | `verify(task_id, pass, reason)` | Evaluator |
-| `escalate(task_id, reason)` | Evaluator, Coordinator |
+| `escalate(task_id, reason)` | Evaluator, Coordinator; from Phase 1 also Queen / Core, Critic / Auditor, Granary keeper, Scout |
 | `route(task_id, role)` | Coordinator |
+| `plan(objective, tasks)` | Queen / Core (Phase 1+, human-approved in Phase 1) |
+| `audit(sample_id, finding)` | Critic / Auditor (Phase 1+) |
+| `debate(task_id, position)` | Critic / Auditor rules; original submitter and Evaluator get one turn each (Phase 1+) |
+| `record(entry)` / `summarize(scope)` | Chronicler (Phase 1+) |
+| `allocate(task_id, budget_class)` | Granary keeper (Phase 1+; fixed caps in Phase 0) |
+| `register(agent_card)` / `intake(task)` | Scout (Phase 1+, gated by G3) |
+| `spawn(role, agent_card)` / `retire(worker_id, reason)` | Request only, by Queen / Core (Phase 2); always gated by G3 |
 | `wait` | All |
+
+Roles and gates (G1 Verify, G2 Audit, G3 Surface) are defined in [ORGCHART.md](ORGCHART.md).
 
 An `invalid` parse is logged and spends food. It does not move the board.

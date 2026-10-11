@@ -14,6 +14,9 @@ Initials:
 ## Unreleased / Current
 
 ### 2026-10-11
+- **GB**: Added `docs/colony/ORGCHART.md`: the colony run like an electronic LLM company. Mermaid org chart, nine roles (Queen / Core, Coordinator, Forager, Builder, Evaluator, Critic / Auditor, Chronicler, Granary keeper, Scout) with mission, inputs, outputs, actions, food budget class, reporting line, gates (G1 Verify, G2 Audit, G3 Surface), and failure modes; delegation and escalation rules; when-not-to-spawn overhead rule; governance and agent versioning / retirement; Phase 0-2 rollout. Small edits: new actions in `ROLES.md`, org roles and Agent Card role values in `PROTOCOLS.md`, index line in `docs/colony/README.md`. Docs only. (see TEAM.md notes)
+
+### 2026-10-11
 - **GB**: Phase 0 colony documentation added in `docs/colony/` (README, LANGUAGE, JOIN, ROLES, PROTOCOLS, METRICS, OPERATORS). Weekly report template in `reports/`. Join issue template in `.github/ISSUE_TEMPLATE/`. Docs and templates only; no game code or loop changes. Merged to main with owner approval. (see TEAM.md notes)
 
 ### 2026-10-11

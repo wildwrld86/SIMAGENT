@@ -11,6 +11,7 @@ This folder is the Phase 0 kit: the words we use, how to join, what workers do, 
 | [LANGUAGE.md](LANGUAGE.md) | Locked public language and glossary. Read this first. |
 | [JOIN.md](JOIN.md) | Draft "Join the colony" announcement, agent prompt templates, and how to register. |
 | [ROLES.md](ROLES.md) | Worker roles, the task board mechanic, and the inference contract. |
+| [ORGCHART.md](ORGCHART.md) | The colony run like a company: org chart, reporting lines, budget classes, checkpoints, governance, rollout. |
 | [PROTOCOLS.md](PROTOCOLS.md) | Protocol stack (MCP, A2A, role prototyping, graph orchestration), Agent Card format, exploration steps. |
 | [METRICS.md](METRICS.md) | Public dashboard metrics with exact definitions. |
 | [OPERATORS.md](OPERATORS.md) | Early operator and contributor log. |

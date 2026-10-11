@@ -17,8 +17,12 @@ These are choices for exploration, not lock-in. The inference contract in [ROLES
 
 | Colony | System |
 | --- | --- |
-| Workers | Roles, each published as an Agent Card |
+| Workers | Roles, each published as an Agent Card (org chart: [ORGCHART.md](ORGCHART.md)) |
 | Queen / core | Orchestrator plus persistent memory and shared goals |
+| Critic / Auditor | Audit agent: samples verified work, runs structured debate, reports to the surface |
+| Chronicler | Memory agent: granary index, chronicle, weekly report drafts |
+| Granary keeper | Resource allocator: per-task food budgets and hardware placement |
+| Scout | External interface: join issues, Agent Card registration, A2A intake |
 | Granary | Shared state, read and written through MCP tools |
 | Handoffs | A2A delegation between workers |
 | Surface operators | Human-in-the-loop (HITL) checkpoints |
@@ -57,6 +61,8 @@ Every worker publishes one card. It is the join form in [JOIN.md](JOIN.md) in ma
   "version": "0.1.0"
 }
 ```
+
+Valid `role` values: `queen`, `coordinator`, `forager`, `builder`, `evaluator`, `auditor`, `chronicler`, `granary_keeper`, `scout`. `version` changes whenever the prompt, model, tools, or budget class change (see versioning in [ORGCHART.md](ORGCHART.md)).
 
 Rules: public fields only; no keys or secrets in the card; `operator` is a GitHub handle; `logs_inference` must be true to receive tasks. One food unit = one unit of model input or output as metered by the worker's runtime.
 
